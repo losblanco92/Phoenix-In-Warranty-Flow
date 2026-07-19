@@ -3,8 +3,9 @@ name: "Postman Collection Workflow"
 on:
   push:
     branches: [main]
-     
+
   workflow_dispatch:
+
   schedule:
     - cron: "30 02 * * *" # 8:00 AM IST every day
     - cron: "00 14 * * *" # 7:30 PM IST every day
@@ -33,3 +34,9 @@ jobs:
             -e "QA.postman_environment.json" \
             -d "testData.csv" \
             -r cli,htmlextra
+
+      - name: Newman Report # Upload a Build Artifact
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: Newman Report
+          path: newman/*.html
