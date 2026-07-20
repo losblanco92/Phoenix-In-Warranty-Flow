@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the code   #Checkout
+      - name: Checkout the code #Checkout
         uses: actions/checkout@v7.0.0
 
-      - name: Setup Node.js and npm  
+      - name: Setup Node.js and npm
         uses: actions/setup-node@v6.5.0
         with:
           node-version: "22"
@@ -36,8 +36,15 @@ jobs:
             -r cli,htmlextra
 
       - name: Newman Report # Upload a Build Artifact
-        if: always() 
+        if: always()
         uses: actions/upload-artifact@v7.0.1
         with:
           name: Newman Report
           path: newman/*.html
+
+      - name: Creating github page branch
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4.1.0 #GitHub Pages action
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: newman/
