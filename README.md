@@ -16,7 +16,7 @@ The project automatically executes Postman collections on a **self-hosted AWS EC
 
 - [Project Overview](#-project-overview)
 - [Architecture](#-architecture)
-- [About Me](#-about-me)
+-  [About Me](#about-me)
 - [Test Coverage](#-test-coverage)
 - [Tech Stack](#-tech-stack)
 - [CI/CD Workflow](#-cicd-workflow)
@@ -161,15 +161,7 @@ Phoenix-In-Warranty-Flow
 ├── Inwarranty-flow Collection.postman_collection.json
 ├── QA.postman_environment.json
 ├── testData.csv
-│
-├── .github
-│   └── workflows
-│       └── postman-api.yml
-│
-├── newman
-│   └── index.html
-│
-└── README.md
+
 ```
 
 ---
@@ -243,4 +235,6 @@ newman/index.html
 - Secure GitHub Secrets integration
 - Data-driven testing using CSV
 - Artifact storage for historical reports
+
+---
 
