@@ -79,7 +79,7 @@ Hi, I'm **Neeraj Joshi**.
 I have **7 years of experience in Software Testing**, including **3 years in Automation Testing**.
 
 My primary skills include:
-
+  Manual Testing (Functional, Regression, Smoke, Sanity, Accessibility & API Testing)
 - Selenium WebDriver (Java)
 - REST Assured
 - Postman API Automation
